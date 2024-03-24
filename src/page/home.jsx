@@ -24,6 +24,12 @@ import FileOpenIcon from '@mui/icons-material/FileOpen';
 import GavelIcon from '@mui/icons-material/Gavel';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { Link } from 'react-router-dom';
+
+
+
+
+
 
 const drawerWidth = 240;
 
@@ -31,6 +37,7 @@ function Home(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
+
 
   const handleDrawerClose = () => {
     setIsClosing(true);
@@ -46,7 +53,6 @@ function Home(props) {
       setMobileOpen(!mobileOpen);
     }
   };
-
   const drawer = (
     <div>
      <div className='text-center' style={{marginTop: '20px'}}>
@@ -57,7 +63,7 @@ function Home(props) {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              {index === 0 ? <HouseIcon style={{color: 'white'}} /> : index === 2 ? <MailIcon style={{color:'white'}}/> : index === 2 ? <GavelIcon style={{color:'white'}}/> : <InsertDriveFileIcon style={{color:'white'}}/>}
+              {index === 0 ? <HouseIcon style={{color: 'white'}} /> : index === 1 ? <MailIcon style={{color:'white'}}/> : index === 2 ? <GavelIcon style={{color:'white'}}/> : <InsertDriveFileIcon style={{color:'white'}}/>}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -121,55 +127,56 @@ function Home(props) {
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
-         <h5>Dashboard</h5> 
+        <h7>Dashboard</h7>
         <Typography paragraph>
-        <Card style={{margin:'20px', background: 'rgba(45, 153, 8, 1)', color: 'white'}}>
-          <CardContent>
-            {/* Card content here */}
-            <Typography variant="h5" component="h2">
-              House 
-            </Typography>
-            <Typography variant="body2" component="p">
-              This is a sample card content.
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card style={{margin:'20px', background: 'rgba(240, 69, 151, 1)', color:'white'}}>
-          <CardContent>
-            {/* Card content here */}
-            <Typography variant="h5" component="h2">
-              Population
-            </Typography>
-            <Typography variant="body2" component="p">
-              This is a sample card content.
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card style={{margin:'20px', background:'rgba(254, 200, 10, 1)', color: 'white'}}>
-          <CardContent>
-            {/* Card content here */}
-            <Typography variant="h5" component="h2">
-              Youth
-            </Typography>
-            <Typography variant="body2" component="p">
-              This is a sample card content.
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card style={{margin:'20px', background: 'rgba(40, 125, 105, 1)', color: 'white'}}>
-          <CardContent>
-            {/* Card content here */}
-            <Typography variant="h5" component="h2">
-              Zones
-            </Typography>
-            <Typography variant="body2" component="p">
-              This is a sample card content.
-            </Typography>
-          </CardContent>
-        </Card>
+          <div style={{display: 'flex', flexWrap: 'wrap', gap: '5px'}}>
+            <Card style={{margin:'20px', background: 'rgba(45, 153, 8, 1)', color: 'white', width:'300px', height: '150px'}}>
+              <CardContent>
+               
+                <Typography variant="h5" component="h2">
+                  <Link to='/house' style={{textDecoration: 'none', color:'white'}}>House</Link>
+                </Typography>
+                <Typography variant="body2" component="p">
+                  This is a sample card content.
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card style={{margin:'20px', background: 'rgba(240, 69, 151, 1)', color:'white',width:'300px', height: '150px'}}>
+              <CardContent>
+                
+                <Typography variant="h5" component="h2">
+                <Link to='/population' style={{textDecoration: 'none', color:'white'}}>Population</Link>
+                </Typography>
+                <Typography variant="body2" component="p">
+                  This is a sample card content.
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card style={{margin:'20px', background:'rgba(254, 200, 10, 1)', color: 'white', width:'300px', height: '150px'}}>
+              <CardContent>
+               
+                <Typography variant="h5" component="h2">
+                <Link to='/youth' style={{textDecoration: 'none', color:'white'}}>Youth</Link>
+                </Typography>
+                <Typography variant="body2" component="p">
+                  This is a sample card content.
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card style={{margin:'20px', background: 'rgba(40, 125, 105, 1)', color: 'white', width:'300px', height: '150px'}}>
+              <CardContent>
+               
+                <Typography variant="h5" component="h2">
+                <Link to='/zone' style={{textDecoration: 'none', color:'white'}}>Zone</Link>
+                </Typography>
+                <Typography variant="body2" component="p">
+                  This is a sample card content.
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
         </Typography>
         <Typography paragraph>
-          
         </Typography>
       </Box>
     </Box>
