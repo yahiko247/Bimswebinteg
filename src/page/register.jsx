@@ -1,6 +1,9 @@
 import '../components/css/Stylelogin.css';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate if using React Router v6 or later
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
+
 
 function Register() {
     const [values, setValues] = useState({
@@ -58,6 +61,11 @@ function Register() {
                             <button type='submit' className='btn btn-success w-100'>Register</button>
                             <hr className='divider' />
                             <p>Do you already have an Account? <Link to="/">Log In</Link></p>
+                             
+                                <div className='d-flex align-items-center'  style={{color: 'rgba(16, 170, 142, 1)', margin:'20px'}}>
+                                    <FacebookIcon style={{marginRight: '90px', marginLeft:'40px'}}/>
+                                    <GoogleIcon/>
+                                </div>
                         </form>
                     </div>
                 </div>

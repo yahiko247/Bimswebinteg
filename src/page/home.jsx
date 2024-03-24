@@ -136,9 +136,6 @@ function Home(props) {
                 <Typography variant="h5" component="h2">
                   <Link to='/house' style={{textDecoration: 'none', color:'white'}}>House</Link>
                 </Typography>
-                <Typography variant="body2" component="p">
-                  This is a sample card content.
-                </Typography>
               </CardContent>
             </Card>
             <Card style={{margin:'20px', background: 'rgba(240, 69, 151, 1)', color:'white',width:'300px', height: '150px'}}>
@@ -146,9 +143,6 @@ function Home(props) {
                 
                 <Typography variant="h5" component="h2">
                 <Link to='/population' style={{textDecoration: 'none', color:'white'}}>Population</Link>
-                </Typography>
-                <Typography variant="body2" component="p">
-                  This is a sample card content.
                 </Typography>
               </CardContent>
             </Card>
@@ -158,9 +152,6 @@ function Home(props) {
                 <Typography variant="h5" component="h2">
                 <Link to='/youth' style={{textDecoration: 'none', color:'white'}}>Youth</Link>
                 </Typography>
-                <Typography variant="body2" component="p">
-                  This is a sample card content.
-                </Typography>
               </CardContent>
             </Card>
             <Card style={{margin:'20px', background: 'rgba(40, 125, 105, 1)', color: 'white', width:'300px', height: '150px'}}>
@@ -168,9 +159,6 @@ function Home(props) {
                
                 <Typography variant="h5" component="h2">
                 <Link to='/zone' style={{textDecoration: 'none', color:'white'}}>Zone</Link>
-                </Typography>
-                <Typography variant="body2" component="p">
-                  This is a sample card content.
                 </Typography>
               </CardContent>
             </Card>
