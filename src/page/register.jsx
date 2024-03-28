@@ -20,7 +20,9 @@ function Register() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setErrors(Validation(values)); // Assuming Validation is defined elsewhere
+        //setErrors(Validation(values)); uncomment this area for using database
+        console.log('Form submitted with data:', formData);
+
         
         // Check if there are no errors before submitting
         if (!errors.name && !errors.email && !errors.password) {

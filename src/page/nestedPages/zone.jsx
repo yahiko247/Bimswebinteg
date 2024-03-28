@@ -18,6 +18,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import HouseIcon from '@mui/icons-material/House';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import FileCopyIcon from '@mui/icons-material/FileCopy';
+import SourceIcon from '@mui/icons-material/Source';
+import FileOpenIcon from '@mui/icons-material/FileOpen';
+import GavelIcon from '@mui/icons-material/Gavel';
 
 const drawerWidth = 240;
 
@@ -104,6 +110,7 @@ export default function Zone() {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
+             background: 'rgba(26, 24, 88, 1)'
           },
         }}
         variant="persistent"
@@ -116,12 +123,12 @@ export default function Zone() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        <List style={{color:'white'}}>
+          {['Home', 'Brg Cetificate', 'Brg Official', 'Brg Indigency'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index === 0 ? <HouseIcon style={{color: 'white'}} /> : index === 1 ? <MailIcon style={{color:'white'}}/> : index === 2 ? <GavelIcon style={{color:'white'}}/> : <InsertDriveFileIcon style={{color:'white'}}/>}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -129,12 +136,12 @@ export default function Zone() {
           ))}
         </List>
         <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        <List style={{color:'white'}}>
+          {['Brg Clearance', 'Residendts', 'Request Documents'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index === 0 ?  <FileCopyIcon style={{color: 'white'}}/> : index ===1 ? <FileOpenIcon style={{color:'white'}}/> : <SourceIcon style={{color:'white'}}/>}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
